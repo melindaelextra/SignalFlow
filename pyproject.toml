@@ -1,0 +1,9 @@
+[project]
+name = "signalflow"
+version = "0.1.0"
+description = "End-to-end ML pipeline for time-series sensor risk prediction"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
