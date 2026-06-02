@@ -1,10 +1,10 @@
-# SignalFlow: End-to-End ML Pipeline for Time-Series Risk Prediction
+# 🚦 SignalFlow: End-to-End ML Pipeline for Time-Series Risk Prediction
 
-SignalFlow is an end-to-end machine learning project for predicting risk events from sensor time-series data. The project uses the NASA CMAPSS turbofan engine degradation dataset to predict whether an engine is approaching a high-risk failure state based on recent sensor readings.
+SignalFlow is an end-to-end machine learning project for predicting risk events from sensor time-series data. It uses the NASA CMAPSS turbofan engine degradation dataset to predict whether an engine is approaching a high-risk failure state based on recent sensor readings.
 
 The goal of this project is to demonstrate a complete AI engineering workflow: data ingestion, preprocessing, label creation, rolling-window feature engineering, model training, evaluation, inference API development, testing, and reporting.
 
-## Problem Statement
+## 🎯 Problem Statement
 
 Given historical sensor readings from an engine, SignalFlow predicts whether the engine is entering a high-risk state.
 
@@ -17,13 +17,13 @@ risk_label = 0 otherwise
 
 This turns the original Remaining Useful Life problem into a binary risk classification task.
 
-## Why This Project Matters
+## 🌍 Why This Project Matters
 
 Many real-world systems generate continuous sensor data, including industrial machines, IoT devices, smart buildings, environmental monitoring systems, and aquaculture infrastructure. Detecting risk early can help teams take action before a system reaches a failure state.
 
 Although this project uses aircraft engine simulation data, the pipeline design is domain-general and can be adapted to other sensor-based prediction problems.
 
-## Dataset
+## 📊 Dataset
 
 This project uses the NASA CMAPSS turbofan engine degradation dataset, specifically the FD001 training subset.
 
@@ -35,7 +35,7 @@ Expected raw file location:
 data/raw/train_FD001.txt
 ```
 
-## Project Architecture
+## 🏗️ Project Architecture
 
 ```text
 Raw sensor data
@@ -59,7 +59,7 @@ FastAPI inference service
 Testing and inference benchmarking
 ```
 
-## Features Implemented
+## ✅ Features Implemented
 
 * Load and clean raw CMAPSS sensor time-series data
 * Create Remaining Useful Life labels
@@ -74,7 +74,7 @@ Testing and inference benchmarking
 * Generate model reports and figures
 * Include automated tests for preprocessing, feature engineering, and API behavior
 
-## Model Results
+## 🧪 Model Results
 
 The current results are based on the NASA CMAPSS FD001 training subset using a binary risk label where `RUL <= 30` cycles is treated as high risk.
 
@@ -83,9 +83,9 @@ The current results are based on the NASA CMAPSS FD001 training subset using a b
 | Logistic Regression |    0.8938 | 0.9957 |   0.9420 |  0.9993 |   0.0087 ms |
 | Random Forest       |    0.9061 | 0.8925 |   0.8992 |  0.9952 |   0.1617 ms |
 
-The best model in this run was Logistic Regression. Although Random Forest achieved slightly higher precision, Logistic Regression produced stronger recall, F1 score, ROC-AUC, and lower inference latency in this experiment.
+The best model in this run was **Logistic Regression**. Although Random Forest achieved slightly higher precision, Logistic Regression produced stronger recall, F1 score, ROC-AUC, and lower inference latency in this experiment.
 
-## API Endpoints
+## 🚀 API Endpoints
 
 The project includes a FastAPI service for model inference.
 
@@ -146,7 +146,7 @@ POST /batch-predict
 
 Used for generating predictions for multiple engines or multiple sensor windows.
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```text
 signalflow_starter/
@@ -189,7 +189,7 @@ signalflow_starter/
     └── test_preprocessing.py
 ```
 
-## How to Run Locally
+## ⚙️ How to Run Locally
 
 ### 1. Create and activate a virtual environment
 
@@ -246,7 +246,7 @@ Then open:
 http://127.0.0.1:8000/docs
 ```
 
-## Reports
+## 📈 Reports
 
 The pipeline generates a model report at:
 
@@ -262,7 +262,7 @@ reports/figures/
 
 These reports summarize model performance, feature importance, prediction behavior, and evaluation results.
 
-## Skills Demonstrated
+## 🛠️ Skills Demonstrated
 
 This project demonstrates:
 
@@ -277,7 +277,7 @@ This project demonstrates:
 * Reproducible project structure
 * Technical documentation and reporting
 
-## Future Improvements
+## 🔮 Future Improvements
 
 Planned improvements include:
 
@@ -290,7 +290,7 @@ Planned improvements include:
 * Deploy the API to Google Cloud Run
 * Add a simple dashboard for prediction monitoring
 
-## Project Status
+## 📌 Project Status
 
 Current version: working end-to-end local ML pipeline with FastAPI inference and passing tests.
 
